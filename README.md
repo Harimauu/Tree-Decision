@@ -38,7 +38,7 @@ Creating a class object: `DecisionTree(df, tar_var, tar_val, mode, criterion, ma
 ## Example:
 
 ```py
-df = pd.read_csv("heart.csv", sep = ";")
+    df = pd.read_csv("heart.csv", sep = ";")
     tar_var = 'Heart'
     tar_val = 'yes'
     dec_tree = DecisionTree(df, tar_var, 'yes', 'auto', 'gini', 10, 1)
