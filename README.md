@@ -17,7 +17,7 @@ Creating a class object: `DecisionTree(df, tar_var, tar_val, mode, criterion, ma
   
   * `criterion` - minimum number of objects in a branch.
   
- Class Methods:
+ ## Class Methods:
   
 `build()` - building a decision tree.
   
@@ -35,10 +35,9 @@ Creating a class object: `DecisionTree(df, tar_var, tar_val, mode, criterion, ma
 
 ![alt text](https://sun9-12.userapi.com/impg/Axawhn5VLSa5D1EdNRF173-zdT1kFtFYAt_MPQ/EX7sb38gEIs.jpg?size=394x278&quality=96&sign=a635440a9ecc87317f52c76537343b43&type=album)
 
-Example:
+## Example:
 
 ```py
-// 
 df = pd.read_csv("heart.csv", sep = ";")
     tar_var = 'Heart'
     tar_val = 'yes'
