@@ -33,7 +33,7 @@ Creating a class object: `DecisionTree(df, tar_var, tar_val, mode, criterion, ma
 
   * `probs` - probabilities to plot ROC Curve.
 
-![alt text](https://sun9-12.userapi.com/impg/Axawhn5VLSa5D1EdNRF173-zdT1kFtFYAt_MPQ/EX7sb38gEIs.jpg?size=394x278&quality=96&sign=a635440a9ecc87317f52c76537343b43&type=album)
+![alt text](https://sun9-72.userapi.com/impg/4UEpH-Bm9HLWn5zF2-7o7AmnjLq1gnK-Q4SBUg/cLyTRcpQdYI.jpg?size=394x278&quality=96&sign=289e6aff91f0eb76d9195577a861a8fd&type=album)
 
 ## Example:
 
