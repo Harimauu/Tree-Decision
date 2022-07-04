@@ -17,9 +17,36 @@ Creating a class object: `DecisionTree(df, tar_var, tar_val, mode, criterion, ma
   
   * `criterion` - minimum number of objects in a branch.
   
-  Class Methods:
+ Class Methods:
   
-  `build()` - building a decision tree.
-  `draw()` - drawing a decision tree graph.
+`build()` - building a decision tree.
   
-  ![alt text](https://sun9-12.userapi.com/impg/GQ7PrtBeTn4WD4tpJtLFMXO5dTNMomQUtKdxPg/PPYW8lZn-H8.jpg?size=2560x1023&quality=96&sign=de6ed80e0c120b36f0dea0680524a9e0&type=album)
+`draw()` - drawing a decision tree graph.
+  
+![alt text](https://sun9-12.userapi.com/impg/GQ7PrtBeTn4WD4tpJtLFMXO5dTNMomQUtKdxPg/PPYW8lZn-H8.jpg?size=2560x1023&quality=96&sign=de6ed80e0c120b36f0dea0680524a9e0&type=album)
+
+`get_probs(df)` - getting probabilities to plot ROC Curve.
+
+`build_roc(y_vals, probs)` - plotting a Roc Curve. Also method returns AUC, optimal FPR and TPR.
+
+  * `y_vals` – target variable values for objects;
+
+  * `probs` - probabilities to plot ROC Curve.
+
+![alt text](https://sun9-12.userapi.com/impg/Axawhn5VLSa5D1EdNRF173-zdT1kFtFYAt_MPQ/EX7sb38gEIs.jpg?size=394x278&quality=96&sign=a635440a9ecc87317f52c76537343b43&type=album)
+
+Example:
+
+```py
+// 
+df = pd.read_csv("heart.csv", sep = ";")
+    tar_var = 'Heart'
+    tar_val = 'yes'
+    dec_tree = DecisionTree(df, tar_var, 'yes', 'auto', 'gini', 10, 1)
+    dec_tree.build()
+    dec_tree.draw()
+    y_vals = df[tar_var].tolist()
+    probs = dec_tree.get_probs(df)
+    values = dec_tree.build_roc(y_vals, probs)
+    print(f"AUC: {values[0]}")
+```
