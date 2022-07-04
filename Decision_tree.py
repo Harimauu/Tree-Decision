@@ -421,11 +421,12 @@ class Leaf(Branch):
 
 if __name__ == "__main__":
     df = pd.read_csv("heart.csv", sep = ";")
-    tar_val = 'Heart'
-    dec_tree = DecisionTree(df, tar_val, 'yes', 'auto', 'gini', 10, 1)
+    tar_var = 'Heart'
+    tar_val = 'yes'
+    dec_tree = DecisionTree(df, tar_var, 'yes', 'auto', 'gini', 10, 1)
     dec_tree.build()
     dec_tree.draw()
-    y_vals = df[tar_val].tolist()
+    y_vals = df[tar_var].tolist()
     probs = dec_tree.get_probs(df)
     values = dec_tree.build_roc(y_vals, probs)
     print(f"AUC: {values[0]}")
